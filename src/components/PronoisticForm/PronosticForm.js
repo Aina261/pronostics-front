@@ -32,12 +32,11 @@ export class PronosticForm extends Component {
         console.log(values);
         try {
             axios
-                .post('http://localhost:3001/api/pronostic', {values})
+                .post('/api/pronostic', {values})
                 .then(response => {
                     console.log(response);
                     if (response.status === 201) {
                         swal('Oooh yeah', 'Ton pronostic à bien était enregistré. \n\n Celui qui gagne devra changer 100 fois sa couche 😁', 'success');
-                        // swal({title: 'Oooh yeah !!!', text: 'Ton pronostic à bien était enregistré. \n\n Celui qui gagne devra changer 100 fois sa couche 😁'});
                     }
                 })
                 .then(error => {
@@ -57,8 +56,7 @@ export class PronosticForm extends Component {
         return (
             <Formik
                 onSubmit={this.submit}
-                // initialValues={{created: '', firstName: '', lastName: '', email: '', name: '', workStart: '', workEnd: '', whereDad: '', hourBirth: '', dateBirth: '', childbirthDuration: '', height: '', weight: '', hairColor: '', eyeColor: '', gender: '', likeMum: '', likeDad: ''}}
-                initialValues={{created: new Date(), firstName: 'Arnaud', lastName: 'Ramiarasoa', email: 'a.ramiarasoa@gmail.com', name: 'Maïna', workStart: '10h32', workEnd: '02h30', whereDad: 'Aux chiottes', hourBirth: '8h50', dateBirth: '2021-04-06', childbirthDuration: '6351', height: '152', weight: '354', hairColor: 'vert', eyeColor: 'orange', gender: 'girl', likeMum: 'Ses cheveux', likeDad: 'Son zizi'}}
+                initialValues={{created: '', firstName: '', lastName: '', email: '', name: '', workStart: '', workEnd: '', whereDad: '', hourBirth: '', dateBirth: '', childbirthDuration: '', height: '', weight: '', hairColor: '', eyeColor: '', gender: '', likeMum: '', likeDad: ''}}
                 validationSchema={this.schema}
             >
                 {({
