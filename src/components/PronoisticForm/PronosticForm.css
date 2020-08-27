@@ -1,0 +1,20 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form>div {
+    margin: 10px 0;
+}
+
+.error {
+    text-transform: capitalize;
+    color: red;
+}
+
+.ligne {
+    height: 1px;
+    width: 100%;
+    background: #F2F2F2;
+    margin-bottom: 20px;
+}

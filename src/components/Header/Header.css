@@ -1,0 +1,38 @@
+.Header {
+    margin: 40px 0;
+}
+
+.logo {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.is {
+    font-size: 4em;
+    margin-right: 30px;
+}
+
+.whoWhenWhat {
+    margin: 0 30px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.question {
+    font-size: 4em;
+}
+
+.offSentence {
+    font-size: .6em;
+    font-style: italic;
+}
+
+.pipe {
+    width: 5px;
+    height: 100px;
+    background: #F2F2F2;
+}
