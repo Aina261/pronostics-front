@@ -7,7 +7,10 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <div className="form flex justify-center">
+      <div className="image">
+          <img src={`${window.location.origin}/baby-foot.png`} alt="" width={"250px"} className={"mb-5"}/>
+      </div>
+      <div className="form flex justify-center w-100 w-md-75 w-lg-50 w-xl-25">
           <PronosticForm />
       </div>
     </div>

@@ -68,9 +68,9 @@ export class PronosticForm extends Component {
                     handleSubmit,
                     isSubmitting,
                     }) => (
-                    <form onSubmit={ handleSubmit } className="align-items-center">
-                        <div className={"w-100 w-md-50 w-lg-25 px-2 px-sm-5"}>
-                            <h3>Pour vous reconnaître</h3>
+                    <form onSubmit={ handleSubmit } className="align-items-center w-100 w-md-75 w-lg-50 w-xl-25">
+                        <div className={"w-100 w-md-75 w-lg-50 w-xl-25 px-2 px-sm-5"}>
+                            <h3>Pour te reconnaître</h3>
                             <div className="ligne"/>
                             <div className={"form-group"}>
                                 <div className="error">{errors.firstName && touched.firstName && errors.firstName}</div>
@@ -91,7 +91,7 @@ export class PronosticForm extends Component {
                             </div>
                         </div>
 
-                        <div className={"w-100 w-md-50 w-lg-25 px-2 px-sm-5"}>
+                        <div className={"w-100 w-md-75 w-lg-50 w-xl-25 px-2 px-sm-5"}>
                             <h3>Pour le petit</h3>
                             <div className="ligne"/>
                             <div className={"form-group"}>
@@ -102,25 +102,25 @@ export class PronosticForm extends Component {
 
                             <div className={"form-group"}>
                                 <div className="error">{errors.workStart && touched.workStart && errors.workStart}</div>
-                                <label htmlFor="workStart">Heure du début du travail : </label><small> (ex : 20h30)</small>
+                                <label htmlFor="workStart">Heure du début du travail : </label><small className={"text-warning"}> (ex : 20h30)</small>
                                 <Field className={"form-control"} type="text" name="workStart" onChange={handleChange} onBlur={handleBlur} value={values.workStart} placeholder={"Heure du début du travail"}/>
                             </div>
 
                             <div className={"form-group"}>
                                 <div className="error">{errors.workEnd && touched.workEnd && errors.workEnd}</div>
-                                <label htmlFor="workEnd">Heure de fin du travail : </label><small> (ex : 20h30)</small>
+                                <label htmlFor="workEnd">Heure de fin du travail : </label><small className={"text-warning"}> (ex : 20h30)</small>
                                 <Field className={"form-control"} type="text" name="workEnd" onChange={handleChange} onBlur={handleBlur} value={values.workEnd} placeholder={"Heure de fin du travail"}/>
                             </div>
 
                             <div className={"form-group"}>
                                 <div className="error">{errors.childbirthDuration && touched.childbirthDuration && errors.childbirthDuration}</div>
-                                <label htmlFor="childbirthDuration">Durée de l'accouchement : </label><small> (en minutes)</small>
+                                <label htmlFor="childbirthDuration">Durée de l'accouchement : </label><small className={"text-warning"}> (en minutes)</small>
                                 <Field className={"form-control"} type="number" name="childbirthDuration" onChange={handleChange} onBlur={handleBlur} value={values.childbirthDuration} placeholder={"Durée de l'accouchement"}/>
                             </div>
 
                             <div className={"form-group"}>
                                 <div className="error">{errors.hourBirth && touched.hourBirth && errors.hourBirth}</div>
-                                <label htmlFor="hourBirth">Heure de naissance : </label><small> (ex : 20h30)</small>
+                                <label htmlFor="hourBirth">Heure de naissance : </label><small className={"text-warning"}> (ex : 20h30)</small>
                                 <Field className={"form-control"} type="text" name="hourBirth" onChange={handleChange} onBlur={handleBlur} value={values.hourBirth} placeholder={"Heure de naissance"}/>
                             </div>
 
@@ -132,13 +132,13 @@ export class PronosticForm extends Component {
 
                             <div className={"form-group"}>
                                 <div className="error">{errors.height && touched.height && errors.height}</div>
-                                <label htmlFor="height">Taille : </label><small> (en centimètre)</small>
+                                <label htmlFor="height">Taille : </label><small className={"text-warning"}> (en centimètre)</small>
                                 <Field className={"form-control"} type="number" name="height" onChange={handleChange} onBlur={handleBlur} value={values.height} placeholder={"Taille"}/>
                             </div>
 
                             <div className={"form-group"}>
                                 <div className="error">{errors.weight && touched.weight && errors.weight}</div>
-                                <label htmlFor="weight">Poids : </label><small> (en gramme)</small>
+                                <label htmlFor="weight">Poids : </label><small className={"text-warning"}> (en gramme)</small>
                                 <Field className={"form-control"} type="number" name="weight" onChange={handleChange} onBlur={handleBlur} value={values.weight} placeholder={"Poids"}/>
                             </div>
 
@@ -172,13 +172,13 @@ export class PronosticForm extends Component {
 
                             <div className={"form-group"}>
                                 <div className="error">{errors.likeMum && touched.likeMum && errors.likeMum}</div>
-                                <label htmlFor="likeMum">* Il/Elle aura ... comme maman : </label>
+                                <label htmlFor="likeMum"><small className={"text-warning"}>Optionnel - </small> Il/Elle aura ... comme maman : </label>
                                 <Field className={"form-control"} type="text" name="likeMum" onChange={handleChange} onBlur={handleBlur} value={values.likeMum} placeholder={"Il/Elle aura ... comme maman"}/>
                             </div>
 
                             <div className={"form-group"}>
                                 <div className="error">{errors.likeDad && touched.likeDad && errors.likeDad}</div>
-                                <label htmlFor="likeDad">* Il/Elle aura ... comme papa : </label>
+                                <label htmlFor="likeDad"><small className={"text-warning"}>Optionnel - </small> Il/Elle aura ... comme papa : </label>
                                 <Field className={"form-control"} type="text" name="likeDad" onChange={handleChange} onBlur={handleBlur} value={values.likeDad} placeholder={"Il/Elle aura ... comme papa"}/>
                             </div>
 
