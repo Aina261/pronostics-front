@@ -61,7 +61,7 @@ export class PronosticForm extends Component {
                 <BabyFootImage />
                 <Formik
                     onSubmit={this.submit}
-                    initialValues={{created: '', firstName: '', lastName: '', email: '', name: '', workStart: '', workEnd: '', whereDad: '', hourBirth: '', dateBirth: '', childbirthDuration: '', height: '', weight: '', hairColor: '', eyeColor: '', gender: '', likeMum: '', likeDad: ''}}
+                    initialValues={{created: '', firstName: '', lastName: '', email: '', name: '', workStart: '', workEnd: '', whereDad: '', hourBirth: '', dateBirth: '2021-03-01', childbirthDuration: '', height: '', weight: '', hairColor: '', eyeColor: '', gender: '', likeMum: '', likeDad: ''}}
                     validationSchema={this.schema}
                 >
                     {({
