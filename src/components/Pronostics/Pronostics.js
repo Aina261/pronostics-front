@@ -4,6 +4,7 @@ import * as swal from 'sweetalert';
 import * as axios from 'axios';
 import PronosticsDetails from "./PronosticsDetails/PronosticsDetails";
 import BabyFootImage from "../BabyFootImage/BabyFootImage";
+import "./Pronostics.css"
 
 export class Pronostics extends Component {
 
@@ -27,7 +28,7 @@ export class Pronostics extends Component {
             <>
                 <Header/>
                 <BabyFootImage />
-                <div className={"px-2"}>
+                <div className={"prono px-2"}>
                     <h1>Les pronostics</h1>
                     <div className={"ligne -5"}/>
                     {this.state.pronostics.map( element => (
