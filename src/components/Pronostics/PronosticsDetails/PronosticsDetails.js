@@ -18,8 +18,8 @@ function PronosticsDetails(props) {
                         <li>Heure du début du travail : {props.element.workStart}</li>
                         <li>Heure de fin du travail : {props.element.workEnd}</li>
                         <li>Durée de l'accouchement : {props.element.childbirthDuration} minutes</li>
-                        <li>Sa taille : {props.element.height} grammes</li>
-                        <li>Son poids : {props.element.weight} cm</li>
+                        <li>Sa taille : {props.element.height} cm</li>
+                        <li>Son poids : {props.element.weight} grammes</li>
                         <li>Sa couleur de cheveux : {props.element.hairColor}</li>
                         <li>Sa couleur des yeux : {props.element.eyeColor}</li>
                         <li>Où sera Papa : {props.element.whereDad}</li>
