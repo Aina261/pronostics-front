@@ -38,7 +38,7 @@ export class PronosticForm extends Component {
                 .then(response => {
                     console.log(response);
                     if (response.status === 201) {
-                        swal('Oooh yeah', 'Ton pronostic à bien était enregistré. \n\n Celui qui gagne devra changer 100 fois sa couche 😁', 'success');
+                        swal('Oooh yeah', 'Ton pronostic à bien été enregistré. \n\n Celui qui gagne devra changer 100 fois sa couche 😁', 'success');
                     }
                 })
                 .then(error => {
