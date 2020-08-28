@@ -14,7 +14,7 @@ function NotFound() {
                 </div>
             </div>
             <div className="notFoundText">
-                <p>Bah alors, n 'est pas peur !!! Tu t'es juste un peu perdu.</p>
+                <p>Bah alors, n 'aie pas peur !!! Tu t'es juste un peu perdu.</p>
                 <p>Clique sur ce bouton pour revenir au formulaire</p>
                 <Link to="/" className="nav-link">
                     <button className={"btn btn-secondary"}>Formulaire</button>

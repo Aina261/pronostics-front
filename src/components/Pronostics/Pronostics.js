@@ -28,7 +28,7 @@ export class Pronostics extends Component {
                 <Header/>
                 <BabyFootImage />
                 <div className={"px-2"}>
-                    <h1>Les pronostiques</h1>
+                    <h1>Les pronostics</h1>
                     <div className={"ligne -5"}/>
                     {this.state.pronostics.map( element => (
                         <PronosticsDetails element={element} key={element._id} />
