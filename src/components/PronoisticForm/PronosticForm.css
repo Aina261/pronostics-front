@@ -11,10 +11,3 @@ form>div {
     text-transform: capitalize;
     color: red;
 }
-
-.ligne {
-    height: 1px;
-    width: 100%;
-    background: #F2F2F2;
-    margin-bottom: 20px;
-}

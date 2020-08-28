@@ -1,0 +1,7 @@
+.element {
+    text-align: left;
+}
+
+.element > ul {
+    list-style: none;
+}

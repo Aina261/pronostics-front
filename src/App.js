@@ -1,20 +1,33 @@
 import React from 'react';
+import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
 import './App.css';
-import {Header} from "./components/Header/Header";
 import {PronosticForm} from "./components/PronoisticForm/PronosticForm";
+import {Pronostics} from "./components/Pronostics/Pronostics";
+import {Navigation} from "./components/Navigation/Navigation";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
-  return (
-    <div className="App">
-      <Header/>
-      <div className="image">
-          <img src={`${window.location.origin}/baby-foot.png`} alt="" width={"250px"} className={"mb-5"}/>
-      </div>
-      <div className="form flex justify-center w-100 w-md-75 w-lg-50 w-xl-25">
-          <PronosticForm />
-      </div>
-    </div>
-  );
+    return (
+        <Router>
+            <div className="App">
+                <Navigation/>
+                <Switch>
+                    <Route exact path="/">
+                        <PronosticForm/>
+                    </Route>
+                    <Route path="/pronostics">
+                        <Pronostics/>
+                    </Route>
+                    <Route path="/404">
+                        <NotFound/>
+                    </Route>
+                    <Route path="*">
+                        <Redirect to="/404" />
+                    </Route>
+                </Switch>
+            </div>
+        </Router>
+    );
 }
 
 export default App;
