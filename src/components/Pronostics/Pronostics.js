@@ -13,7 +13,7 @@ export class Pronostics extends Component {
     }
 
     async componentDidMount() {
-        const response = await axios.get('http://localhost:3001/api/pronostic');
+        const response = await axios.get('/api/pronostic');
         if (response.status === 200) {
             const data = response.data;
             await this.setState({pronostics: data});
