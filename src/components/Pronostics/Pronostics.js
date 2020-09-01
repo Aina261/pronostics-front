@@ -28,7 +28,7 @@ export class Pronostics extends Component {
             <>
                 <Header/>
                 <BabyFootImage />
-                <div className={"prono px-2"}>
+                <div className={"prono px-2 d-flex flex-column justify-content-center align-items-center"}>
                     <h1>Les pronostics</h1>
                     <div className={"ligne -5"}/>
                     {this.state.pronostics.map( element => (
