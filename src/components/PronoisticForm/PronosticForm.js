@@ -25,7 +25,7 @@ export class PronosticForm extends Component {
         weight: Yup.number().required().positive().integer(),
         hairColor: Yup.string().required(),
         eyeColor: Yup.string().required(),
-        gender: Yup.mixed().required().oneOf(['girl', 'boy']),
+        gender: Yup.mixed().required().oneOf(['girl', 'boy', 'alien', 'unicorn']),
         likeMum: Yup.string(),
         likeDad: Yup.string()
     });
