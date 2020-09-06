@@ -107,6 +107,8 @@ export class PronosticForm extends Component {
                                         <option defaultValue={"choose"}>Choisir</option>
                                         <option value="girl">Fille</option>
                                         <option value="boy">Garçon</option>
+                                        <option value="alien">Alien</option>
+                                        <option value="unicorn">Licorne</option>
                                     </Field>
                                 </div>
 
