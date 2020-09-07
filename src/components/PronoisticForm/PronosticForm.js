@@ -73,9 +73,9 @@ export class PronosticForm extends Component {
                         handleSubmit,
                         isSubmitting,
                         }) => (
-                        <form onSubmit={ handleSubmit } className="align-items-center w-100 w-md-75 w-lg-50 w-xl-25">
+                        <form onSubmit={ handleSubmit } className="align-items-center w-100 w-md-75 w-lg-50 w-xl-25 mb-5">
                             <div className={"w-100 w-md-75 w-lg-50 w-xl-25 px-2 px-sm-5"}>
-                                <h3>Pour te reconnaître</h3>
+                                <h2>Pour te reconnaître</h2>
                                 <div className="ligne"/>
                                 <div className={"form-group"}>
                                     <div className="error">{errors.firstName && touched.firstName && errors.firstName}</div>
@@ -97,7 +97,7 @@ export class PronosticForm extends Component {
                             </div>
 
                             <div className={"w-100 w-md-75 w-lg-50 w-xl-25 px-2 px-sm-5"}>
-                                <h3>Pour le petit</h3>
+                                <h2>Pour le petit</h2>
                                 <div className="ligne"/>
 
                                 <div className={"form-group"}>
@@ -192,8 +192,8 @@ export class PronosticForm extends Component {
 
 
 
-                                <div>
-                                    <button className={"btn btn-secondary w-100"} type="submit" disabled={isSubmitting}>Envoyer</button>
+                                <div className={"my-5"}>
+                                    <button className={"btn btn-secondary w-100"} type="submit" disabled={isSubmitting}>Soumettre</button>
                                 </div>
                             </div>
                         </form>
