@@ -6,7 +6,7 @@ moment.locale('fr');
 function PronosticsDetails(props) {
     return (
         <div className={"element mt-5 d-flex flex-column justify-content-center"}>
-            <h2 className={"my-0"}>Voici le pronotic de <strong>{props.element.firstName}</strong></h2>
+            <h2 className={"my-0"}>Voici le pronostic de <strong>{props.element.firstName}</strong></h2>
             <small>Proposé le {moment(props.element.created).format('DD-MM-YYYY à HH:mm')}</small>
             <div>
                 <ul className={"mt-3"}>
