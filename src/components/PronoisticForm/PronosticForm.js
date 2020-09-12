@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import { Formik, Field } from 'formik';
 import * as swal from 'sweetalert';
-import * as axios from 'axios';
+import axios from 'axios';
 import * as Yup from 'yup';
 import "./PronosticForm.css";
 import {Header} from "../Header/Header";
@@ -34,7 +34,7 @@ export class PronosticForm extends Component {
         console.log(values);
         try {
             axios
-                .post('/api/pronostic', {values})
+                .post(`${process.env.REACT_APP_BASE_URL}/api/pronostic`, {values})
                 .then(response => {
                     console.log(response);
                     if (response.status === 201) {

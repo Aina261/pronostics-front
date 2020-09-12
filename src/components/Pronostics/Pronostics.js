@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Header} from "../Header/Header";
 import * as swal from 'sweetalert';
-import * as axios from 'axios';
+import axios from 'axios';
 import PronosticsDetails from "./PronosticsDetails/PronosticsDetails";
 import BabyFootImage from "../BabyFootImage/BabyFootImage";
 import "./Pronostics.css"
@@ -14,7 +14,7 @@ export class Pronostics extends Component {
     }
 
     async componentDidMount() {
-        const response = await axios.get('/api/pronostic');
+        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/pronostic`);
         if (response.status === 200) {
             const data = response.data;
             await this.setState({pronostics: data});
