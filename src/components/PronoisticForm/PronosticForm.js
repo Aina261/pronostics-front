@@ -178,6 +178,11 @@ export class PronosticForm extends Component {
                                     <Field className={"form-control"} type="text" name="whereDad" onChange={handleChange} onBlur={handleBlur} value={values.whereDad} placeholder={"Où sera le père ... Surement aux toilettes"}/>
                                 </div>
 
+                            </div>
+                            <div className={"w-100 w-md-75 w-lg-50 w-xl-25 px-2 px-sm-5"}>
+                                <h2>Les points bonus</h2>
+                                <div className="ligne"/>
+
                                 <div className={"form-group"}>
                                     <div className="error">{errors.likeMum && touched.likeMum && errors.likeMum}</div>
                                     <label htmlFor="likeMum"><small className={"text-warning"}>Optionnel - </small> Il/Elle aura ... comme maman : </label>

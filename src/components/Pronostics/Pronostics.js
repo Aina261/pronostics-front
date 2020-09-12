@@ -28,12 +28,14 @@ export class Pronostics extends Component {
             <>
                 <Header/>
                 <BabyFootImage />
-                <div className={"prono px-2 d-flex flex-column justify-content-center align-items-center mb-5"}>
+                <div className={"container px-2 w-100 mb-5"}>
                     <h1>Les pronostics</h1>
                     <div className={"ligne -5"}/>
-                    {this.state.pronostics.map( element => (
-                        <PronosticsDetails element={element} key={element._id} />
-                    ))}
+                    <div className={"row m-auto d-flex justify-content-around"}>
+                        {this.state.pronostics.map( element => (
+                            <PronosticsDetails element={element} key={element._id} />
+                        ))}
+                    </div>
                 </div>
             </>
         )
