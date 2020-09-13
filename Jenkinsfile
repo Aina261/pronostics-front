@@ -49,6 +49,7 @@ pipeline {
 def buildApplication() {
     try {
         sh 'npm install'
+        sh 'npm run build'
     } catch (Exception err) {
         error('[BUILD APPLICATION] : ' + err.getMessage())
     }
