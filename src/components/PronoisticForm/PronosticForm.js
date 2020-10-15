@@ -186,13 +186,13 @@ export class PronosticForm extends Component {
                                 <div className={"form-group"}>
                                     <div className="error">{errors.likeMum && touched.likeMum && errors.likeMum}</div>
                                     <label htmlFor="likeMum"><small className={"text-warning"}>Optionnel - </small> Il/Elle aura ... comme maman : </label>
-                                    <Field className={"form-control"} type="text" name="likeMum" onChange={handleChange} onBlur={handleBlur} value={values.likeMum} placeholder={"Il/Elle aura ... comme maman"}/>
+                                    <Field className={"form-control"} type="text" name="likeMum" onChange={handleChange} onBlur={handleBlur} value={values.likeMum} placeholder={"Elle aura de grand cheveux, comme maman"}/>
                                 </div>
 
                                 <div className={"form-group"}>
                                     <div className="error">{errors.likeDad && touched.likeDad && errors.likeDad}</div>
                                     <label htmlFor="likeDad"><small className={"text-warning"}>Optionnel - </small> Il/Elle aura ... comme papa : </label>
-                                    <Field className={"form-control"} type="text" name="likeDad" onChange={handleChange} onBlur={handleBlur} value={values.likeDad} placeholder={"Il/Elle aura ... comme papa"}/>
+                                    <Field className={"form-control"} type="text" name="likeDad" onChange={handleChange} onBlur={handleBlur} value={values.likeDad} placeholder={"Il aura un gros zizi, comme papa"}/>
                                 </div>
 
 
