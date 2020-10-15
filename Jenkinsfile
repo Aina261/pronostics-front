@@ -1,9 +1,10 @@
 #!/usr/bin/env groovy
 pipeline {
     agent any
-    tools { nodejs "NodeJs-14.10.1" }
+    tools { nodejs "NodeJs-14.13.1" }
 
     environment {
+        projectName = "pronostics"
         applicationName = "pronostics-front"
         environment = "PROD"
         sshCredentials = "aina@192.168.1.105"
@@ -31,7 +32,7 @@ pipeline {
 
         stage('Restart application') {
             steps {
-                unpackAndRestartOnRemote(sshCredentials, applicationName, environment)
+                unpackAndRestartOnRemote(sshCredentials, projectName, applicationName, environment)
             }
         }
     }
@@ -70,7 +71,7 @@ def deployNodeJsArchiveToRemote(sshCredentials, applicationName, environment) {
   try {
     // Copy the current folder to the remote server
     sshagent(['aina']) {
-      sh 'scp -o StrictHostKeyChecking=no /tmp/' + applicationName + '-' + environment + '.tgz ' + sshCredentials + ':/tmp'
+      sh 'scp /tmp/' + applicationName + '-' + environment + '.tgz ' + sshCredentials + ':/tmp'
     }
   } catch (Exception err) {
     error('[DEPLOY ARCHIVE ON REMOTE] : ' + err.getMessage())
@@ -78,19 +79,19 @@ def deployNodeJsArchiveToRemote(sshCredentials, applicationName, environment) {
 }
 
 //Unpack the newly copied archive and restart the application
-def unpackAndRestartOnRemote(sshCredentials, applicationName, environment) {
+def unpackAndRestartOnRemote(sshCredentials, projectName, applicationName, environment) {
     sshagent(['aina']) {
         try {
             // Remove existing code
-            sh 'ssh -o StrictHostKeyChecking=no ' + sshCredentials + ' rm -rf /var/www/html/pronostics/' + applicationName + '/*'
+            sh 'ssh ' + sshCredentials + ' rm -rf /var/www/production/' + projectName + '/' + applicationName + '/*'
         } catch (Exception err) {
             echo 'No files to overprint'
         }
         try {
             // Extract new code
-            sh 'ssh -o StrictHostKeyChecking=no ' + sshCredentials + ' tar -xzf /tmp/' + applicationName + '-' + environment + '.tgz -C /var/www/html/pronostics/' + applicationName + '/'
+            sh 'ssh ' + sshCredentials + ' tar -xzf /tmp/' + applicationName + '-' + environment + '.tgz -C /var/www/production/' + projectName + '/' + applicationName + '/'
             // Remove the copied archive
-            sh 'ssh -o StrictHostKeyChecking=no ' + sshCredentials + ' rm /tmp/' + applicationName + '-' + environment + '.tgz'
+            sh 'ssh ' + sshCredentials + ' rm /tmp/' + applicationName + '-' + environment + '.tgz'
         } catch (Exception err) {
             error('[DEPLOY ON REMOTE] : ' + err.getMessage())
         }
